@@ -16,7 +16,6 @@ async function main() {
     const contract = await MyNFT.deploy();
 
     console.log(`Token deployed to: ${contract.deployTransaction.hash}`);
-
 }
 
 // Main entry point for the deployment script
