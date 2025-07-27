@@ -15,7 +15,19 @@ async function main() {
     // Deploy the contract with the specified name and symbol
     const contract = await MyNFT.deploy();
 
+    console.log('------- Deployment successful -------');
+
+    console.log(`Deployer address: ${contract.deployTransaction.from}`);
+
     console.log(`Token deployed to: ${contract.deployTransaction.hash}`);
+
+    console.log(`Token name: ${await contract.name()}`);
+
+    console.log(`Token symbol: ${await contract.symbol()}`);
+
+    console.log(`Total supply: ${await contract.totalSupply()}`);
+
+    console.log(`Deployed contract address: ${contract.address}`);
 }
 
 // Main entry point for the deployment script
