@@ -5,7 +5,6 @@ import 'dotenv/config';
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY || '';
 const RPC_URL = process.env.RPC_URL || '';
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || '';
 
 const accounts = PRIVATE_KEY ? [PRIVATE_KEY] : [];
 
@@ -19,27 +18,12 @@ const config: HardhatUserConfig = {
       },
     },
   },
+  defaultNetwork: "follow_rpc_url",
   networks: {
-    // Local development network
-    localhost: {
-      url: 'http://127.0.0.1:8545',
-    },
-    hardhat: {
-      chainId: 1337,
-    },
-    // Ethereum Testnet
-    sepolia: {
+    follow_rpc_url: {
       url: RPC_URL,
       accounts
     },
-    // Ethereum Mainnet
-    ethereum: {
-      url: RPC_URL,
-      accounts
-    },
-  },
-  etherscan: {
-    apiKey: ETHERSCAN_API_KEY
   },
   paths: {
     sources: './contracts',

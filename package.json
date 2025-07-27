@@ -9,7 +9,7 @@
     "access": "public"
   },
   "scripts": {
-    "deploy:erc721": "hardhat run scripts/deployERC721.ts --network"
+    "deploy:erc721": "hardhat run scripts/deployERC721.ts"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
