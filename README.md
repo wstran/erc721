@@ -19,4 +19,4 @@ This project contains a minimal and secure implementation of an **ERC-721 NFT** 
 > Deploy your ERC-721 NFT contract with a single command:
 
 ```bash
-npm run deploy:erc721 sepolia
+npm run deploy:erc721
